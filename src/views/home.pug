@@ -12,7 +12,10 @@ html(lang="en")
                 input(placeholder="what's your name ? ", type="text")
         .gameContainer#jsGame 
             div#jsNotifications
-            h1 you are logged in!
+            .chat 
+                ul.chat__messages#jsMessages 
+                form.chat__form#jsSendMsg
+                    input(placeholder="write a message", type="text")
         script.
             window.events = !{events}
         script(src="/socket.io/socket.io.js")
