@@ -1,0 +1,97 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  .canvasContainer{
+    position:relative;
+    canvas {
+      margin: 40px 0px;
+      width: 500px;
+      height: 500px;
+      background: #ffffff;
+      border-radius: 19px;
+      box-shadow: $box-shadow;
+    }
+    #jsNotifications {
+      position: absolute;
+      left: calc((100% - 200px)/2);
+      top: calc((100% - 40px)/2);
+      width:0;
+      height:0;
+      text-align: center;
+      div {
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        opacity: 1;
+        transition: 0.5s;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+  .controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .controls-range {
+      margin-bottom: 20px;
+      input[type=range] {
+        appearance: none;
+        background: transparent;
+        &::-webkit-slider-runnable-track { 
+          width: 100%; 
+          height: 18.4px; 
+          cursor: pointer; 
+          box-shadow: $box-shadow; 
+          background: #3071a9; 
+          border-radius: 1.3px; 
+        }
+        &::-webkit-slider-thumb { 
+          -webkit-appearance: none; 
+          background: #ffffff; 
+          cursor: pointer; 
+          height: 36px; 
+          width: 16px; 
+          margin-top: -14px; 
+          box-shadow: $box-shadow; 
+          border-radius: 3px; }
+
+      }
+    }
+    .controls-btns {
+      margin-bottom: 30px;
+      button {
+        all: unset;
+        cursor: pointer;
+        background: #fff;
+        padding: 5px 0px;
+        width: 80px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0 5px;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+          0 1px 3px rgba(0, 0, 0, 0.07);
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.8);
+      }
+      button:active {
+        scale: 0.87;
+      }
+    }
+    .controls-colors {
+      display: flex;
+      .controls-color {
+        margin: 0 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+          0 1px 3px rgba(0, 0, 0, 0.07);
+      }
+    }
+  }
+}

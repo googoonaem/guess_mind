@@ -29,3 +29,5 @@ if(sendMsg) {
 }
 
 export const handleNewMessage = ({message, nickname, color}) => appendMsg(message, nickname, color);
+export const disableChat = () => sendMsg.style.display = "none";
+export const enableChat = () => sendMsg.style.display = "block";

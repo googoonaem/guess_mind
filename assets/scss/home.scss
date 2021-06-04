@@ -1,15 +1,36 @@
 body {
-    .loginBox, .gameContainer {
-        display: none;
+    background-color: #f6fcf3;
+    .loginBox,
+    .gameContainer {
+      display: none;
     }
+  
     &.loggedOut {
-        .loginBox {
-            display: block;
-        }
+      .loginBox {
+        display: block;
+      }
     }
     &.loggedIn {
-        .gameContainer {
-            display: block;
+      .gameContainer {
+        display: block;
+        position: relative;
+        width: 850px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+          "canvas chat"
+          "controls .";
+        grid-template-columns: 1fr 0.4fr;
+        .canvasContainer {
+          grid-area: canvas;
+          position: absolute;
         }
+        .chat {
+          grid-area: chat;
+        }
+        .controls {
+          grid-area: controls;
+        }
+      }
     }
-}
+  }
